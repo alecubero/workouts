@@ -324,52 +324,29 @@
 
 <main id="mainContent"></main>
 
-<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2/dist/umd/supabase.min.js"></script>
 <script>
-  const SUPABASE_URL  = 'https://eqxkpimvjvcnmiwxqisk.supabase.co';
-  const SUPABASE_ANON = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImVxeGtwaW12anZjbm1pd3hxaXNrIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NzYxMjQ4NDUsImV4cCI6MjA5MTcwMDg0NX0.ex6I5FSeRtdQ5VHdkkavhXp_8JRJcnzYSkGef1tpViQ';
-
-  const supabase = window.supabase.createClient(SUPABASE_URL, SUPABASE_ANON);
-
   const dotColors = ['d1', 'd2', 'd3', 'd4'];
 
   async function loadData() {
     const nav  = document.getElementById('monthNav');
     const main = document.getElementById('mainContent');
 
-    // Fetch all data in parallel
-    const [{ data: meses, error: e1 }, { data: circuitos, error: e2 }, { data: ejercicios, error: e3 }] = await Promise.all([
-      supabase.from('meses').select('*').order('orden'),
-      supabase.from('circuitos').select('*').order('dia'),
-      supabase.from('ejercicios').select('*').order('orden'),
-    ]);
-
-    if (e1 || e2 || e3) {
+    let payload;
+    try {
+      const res = await fetch('./data.json');
+      if (!res.ok) throw new Error(res.status);
+      payload = await res.json();
+    } catch (err) {
       nav.innerHTML  = '';
       main.innerHTML = `<div class="error-state">Error al cargar los datos. Inténtalo de nuevo.</div>`;
-      console.error(e1 || e2 || e3);
+      console.error(err);
       return;
     }
 
-    // Index by id for quick lookup
-    const circuitosByMes  = {};
-    const ejerciciosByCircuito = {};
-
-    for (const c of circuitos) {
-      if (!circuitosByMes[c.mes_id]) circuitosByMes[c.mes_id] = [];
-      circuitosByMes[c.mes_id].push(c);
-    }
-
-    for (const e of ejercicios) {
-      if (!ejerciciosByCircuito[e.circuito_id]) ejerciciosByCircuito[e.circuito_id] = [];
-      ejerciciosByCircuito[e.circuito_id].push(e);
-    }
-
-    // Render nav buttons
-    nav.innerHTML = '';
+    nav.innerHTML  = '';
     main.innerHTML = '';
 
-    meses.forEach((mes, mi) => {
+    payload.meses.forEach((mes, mi) => {
       const btn = document.createElement('button');
       btn.className = 'month-btn' + (mi === 0 ? ' active' : '');
       btn.textContent = mes.nombre;
@@ -381,8 +358,6 @@
       };
       nav.appendChild(btn);
 
-      const mesCircuitos = circuitosByMes[mes.id] || [];
-
       const view = document.createElement('div');
       view.className = 'month-view' + (mi === 0 ? ' active' : '');
       view.id = 'mv-' + mes.id;
@@ -390,14 +365,12 @@
       let html = `
         <div class="month-header">
           <h2>${mes.nombre}</h2>
-          <span>${mesCircuitos.length} días</span>
+          <span>${mes.circuitos.length} días</span>
         </div>
         <div class="circuits-list">`;
 
-      mesCircuitos.forEach((c, ci) => {
-        const dc  = dotColors[ci % 4];
-        const exs = ejerciciosByCircuito[c.id] || [];
-
+      mes.circuitos.forEach((c, ci) => {
+        const dc = dotColors[ci % 4];
         html += `
         <div class="circuit-card">
           <div class="circuit-header" onclick="toggleCircuit(this)">
@@ -423,7 +396,7 @@
                 </tr>
               </thead>
               <tbody>
-                ${exs.map(e => `
+                ${c.ejercicios.map(e => `
                 <tr>
                   <td>
                     <div>${e.nombre}</div>
