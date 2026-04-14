@@ -32,50 +32,26 @@
     line-height: 1.6;
   }
 
-  header {
+  .gcal-btn {
+    display: block;
+    width: calc(100% - 24px);
+    margin: 12px;
+    padding: 11px 16px;
     background: var(--accent);
-    padding: 32px 20px 24px;
-    position: relative;
-    overflow: hidden;
-  }
-
-  header::before {
-    content: '';
-    position: absolute;
-    right: -30px;
-    top: -40px;
-    width: 180px;
-    height: 180px;
-    border-radius: 50%;
-    background: rgba(255,255,255,0.05);
-  }
-
-  header::after {
-    content: '';
-    position: absolute;
-    right: 30px;
-    bottom: -60px;
-    width: 120px;
-    height: 120px;
-    border-radius: 50%;
-    background: rgba(255,255,255,0.04);
-  }
-
-  .header-label {
-    font-size: 11px;
-    letter-spacing: 0.12em;
-    text-transform: uppercase;
-    color: var(--accent-mid);
-    margin-bottom: 6px;
-    font-weight: 500;
-  }
-
-  header h1 {
-    font-family: 'DM Serif Display', serif;
-    font-size: 30px;
     color: #fff;
-    font-weight: 400;
-    line-height: 1.2;
+    border: none;
+    border-radius: 10px;
+    font-family: 'DM Sans', sans-serif;
+    font-size: 13px;
+    font-weight: 500;
+    cursor: pointer;
+    text-align: center;
+    text-decoration: none;
+    transition: opacity 0.2s;
+  }
+
+  @media (hover: hover) and (pointer: fine) {
+    .gcal-btn:hover { opacity: 0.85; }
   }
 
   .month-nav {
@@ -313,11 +289,6 @@
 </head>
 <body>
 
-<header>
-  <div class="header-label">Plan de entrenamiento</div>
-  <h1>Alejandra</h1>
-</header>
-
 <nav class="month-nav" id="monthNav">
   <div class="loading-state">Cargando…</div>
 </nav>
@@ -326,6 +297,26 @@
 
 <script>
   const dotColors = ['d1', 'd2', 'd3', 'd4'];
+
+  function buildGcalUrl(circuito, mesNombre) {
+    const now   = new Date();
+    const ymd   = now.toISOString().slice(0, 10).replace(/-/g, '');
+    const next  = new Date(now); next.setDate(now.getDate() + 1);
+    const ymd1  = next.toISOString().slice(0, 10).replace(/-/g, '');
+
+    const title   = `Entrenamiento: ${circuito.label}`;
+    const details = circuito.ejercicios
+      .map(e => `• ${e.nombre} (${e.reps})${e.obs ? ' — ' + e.obs : ''}`)
+      .join('\n');
+
+    const params = new URLSearchParams({
+      action:  'TEMPLATE',
+      text:    title,
+      dates:   `${ymd}/${ymd1}`,
+      details: details,
+    });
+    return `https://calendar.google.com/calendar/render?${params.toString()}`;
+  }
 
   async function loadData() {
     const nav  = document.getElementById('monthNav');
@@ -371,6 +362,7 @@
 
       mes.circuitos.forEach((c, ci) => {
         const dc = dotColors[ci % 4];
+        const gcalUrl = buildGcalUrl(c, mes.nombre);
         html += `
         <div class="circuit-card">
           <div class="circuit-header" onclick="toggleCircuit(this)">
@@ -407,6 +399,7 @@
                 </tr>`).join('')}
               </tbody>
             </table>
+            <a class="gcal-btn" href="${gcalUrl}" target="_blank" rel="noopener">✓ Hecho hoy — añadir al calendario</a>
           </div>
         </div>`;
       });
