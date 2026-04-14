@@ -324,13 +324,12 @@
 
 <main id="mainContent"></main>
 
-<script type="module">
-  import { createClient } from 'https://esm.sh/@supabase/supabase-js@2';
-
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2/dist/umd/supabase.min.js"></script>
+<script>
   const SUPABASE_URL  = 'https://eqxkpimvjvcnmiwxqisk.supabase.co';
   const SUPABASE_ANON = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImVxeGtwaW12anZjbm1pd3hxaXNrIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NzYxMjQ4NDUsImV4cCI6MjA5MTcwMDg0NX0.ex6I5FSeRtdQ5VHdkkavhXp_8JRJcnzYSkGef1tpViQ';
 
-  const supabase = createClient(SUPABASE_URL, SUPABASE_ANON);
+  const supabase = window.supabase.createClient(SUPABASE_URL, SUPABASE_ANON);
 
   const dotColors = ['d1', 'd2', 'd3', 'd4'];
 
@@ -455,5 +454,6 @@
 
   loadData();
 </script>
+
 </body>
 </html>
