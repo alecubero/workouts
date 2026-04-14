@@ -1,28 +1,30 @@
 {
   "meses": [
     {
-      "id": 1,
+      "id": 3,
       "nombre": "Abril 2026",
       "orden": 1,
       "circuitos": [
         {
           "dia": 1,
           "label": "Pierna · TRX",
-          "sub": "6 ejercicios · Elíptica 10 min",
+          "sub": "6 ejercicios",
+          "calentamiento": "Elíptica 10 min",
           "nota": null,
           "ejercicios": [
-            { "orden": 1, "nombre": "Sentadilla TRX normal + profunda",              "reps": "10-10-10",          "descanso": "1 min", "obs": "10 normales + 10 profundas, espalda lo más recta posible" },
-            { "orden": 2, "nombre": "Sentadilla en banco con mancuernas en hombros", "reps": "10-12-15-20",       "descanso": "1 min", "obs": "Tocar el banco con el glúteo pero sin sentarse" },
-            { "orden": 3, "nombre": "Sentadilla sumo con kettlebell + parada abajo", "reps": "10-10-10 +20\"",   "descanso": "1 min", "obs": "En la última repetición, aguantar abajo 20 segundos" },
-            { "orden": 4, "nombre": "Zancadas en TRX",                               "reps": "10-10-10 c/pierna","descanso": "1 min", "obs": null },
-            { "orden": 5, "nombre": "Zancadas en TRX con rodillazo",                 "reps": "10-10-10",          "descanso": "1 min", "obs": "Al levantarte, lanza un rodillazo con la pierna de atrás" },
-            { "orden": 6, "nombre": "Peso muerto con mancuernas",                    "reps": "15-15-15",          "descanso": "1 min", "obs": "Movimiento muy lento" }
+            { "orden": 1, "nombre": "Sentadilla TRX normal + profunda",              "reps": "10-10-10",             "descanso": "1 min", "obs": "10 normales + 10 profundas, espalda lo más recta posible" },
+            { "orden": 2, "nombre": "Sentadilla en banco con mancuernas en hombros", "reps": "10-12-15-20",          "descanso": "1 min", "obs": "Tocar el banco con el glúteo pero sin sentarse" },
+            { "orden": 3, "nombre": "Sentadilla sumo con kettlebell + parada abajo", "reps": "10-10-10 +20\"",      "descanso": "1 min", "obs": "En la última repetición, aguantar abajo 20 segundos" },
+            { "orden": 4, "nombre": "Zancadas en TRX",                               "reps": "10-10-10 c/pierna",   "descanso": "1 min", "obs": null },
+            { "orden": 5, "nombre": "Zancadas en TRX con rodillazo",                 "reps": "10-10-10",             "descanso": "1 min", "obs": "Al levantarte, lanza un rodillazo con la pierna de atrás" },
+            { "orden": 6, "nombre": "Peso muerto con mancuernas",                    "reps": "15-15-15",             "descanso": "1 min", "obs": "Movimiento muy lento" }
           ]
         },
         {
           "dia": 2,
           "label": "Espalda · Jalón + Remo",
-          "sub": "6 ejercicios · Elíptica 10 min",
+          "sub": "6 ejercicios",
+          "calentamiento": "Elíptica 10 min",
           "nota": null,
           "ejercicios": [
             { "orden": 1, "nombre": "Jalón en polea alta",                     "reps": "15-10-10-10-12", "descanso": "1 min", "obs": "1ª serie = calentamiento" },
@@ -36,21 +38,23 @@
         {
           "dia": 3,
           "label": "Pierna · Máquinas",
-          "sub": "6 ejercicios · Elíptica 10 min",
+          "sub": "6 ejercicios",
+          "calentamiento": "Elíptica 10 min",
           "nota": null,
           "ejercicios": [
-            { "orden": 1, "nombre": "Movilidad de cadera y piernas en el suelo",        "reps": "15-10-10-10-12",    "descanso": "1 min", "obs": "Son 2 ejercicios — te mandan audio/vídeo" },
-            { "orden": 2, "nombre": "Prensa normal",                                     "reps": "10-10-10-10",       "descanso": "1 min", "obs": null },
-            { "orden": 3, "nombre": "Prensa con punteras",                               "reps": "12-12-10",          "descanso": "1 min", "obs": null },
-            { "orden": 4, "nombre": "Extensión de cuádriceps en máquina",               "reps": "10-10-12",          "descanso": "1 min", "obs": null },
+            { "orden": 1, "nombre": "Movilidad de cadera y piernas en el suelo",        "reps": "15-10-10-10-12",       "descanso": "1 min", "obs": "Son 2 ejercicios — te mandan audio/vídeo" },
+            { "orden": 2, "nombre": "Prensa normal",                                     "reps": "10-10-10-10",          "descanso": "1 min", "obs": null },
+            { "orden": 3, "nombre": "Prensa con punteras",                               "reps": "12-12-10",             "descanso": "1 min", "obs": null },
+            { "orden": 4, "nombre": "Extensión de cuádriceps en máquina",               "reps": "10-10-12",             "descanso": "1 min", "obs": null },
             { "orden": 5, "nombre": "Contractora femoral normal + a una pierna",        "reps": "10-10-10 +5 c/pierna", "descanso": "1 min", "obs": "10 normales, luego 5 con cada pierna muy despacio y poco peso" },
-            { "orden": 6, "nombre": "Máquina ABD + ADD",                                "reps": "10-10-10-10",       "descanso": "1 min", "obs": "El orden da igual. Poco peso, movimiento lento, apretar al final" }
+            { "orden": 6, "nombre": "Máquina ABD + ADD",                                "reps": "10-10-10-10",          "descanso": "1 min", "obs": "El orden da igual. Poco peso, movimiento lento, apretar al final" }
           ]
         },
         {
           "dia": 4,
           "label": "Full body · Circuito",
-          "sub": "6 ejercicios · Elíptica 10 min",
+          "sub": "6 ejercicios",
+          "calentamiento": "Elíptica 10 min",
           "nota": "3 rondas",
           "ejercicios": [
             { "orden": 1, "nombre": "Flexiones en step de rodillas",                    "reps": "10-12-15", "descanso": "1 min", "obs": null },
@@ -59,6 +63,140 @@
             { "orden": 4, "nombre": "Elevación lateral con mancuernas + martillo",     "reps": "10-10-12", "descanso": "1 min", "obs": null },
             { "orden": 5, "nombre": "Zancada con press de hombro a una mano",          "reps": "10-10-10", "descanso": "1 min", "obs": null },
             { "orden": 6, "nombre": "Plancha",                                          "reps": "40 seg",   "descanso": "1 min", "obs": null }
+          ]
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "nombre": "Marzo 2026",
+      "orden": 2,
+      "circuitos": [
+        {
+          "dia": 1,
+          "label": "Pierna · Multipower",
+          "sub": "6 ejercicios",
+          "calentamiento": "Elíptica 5 min + 15 min al finalizar",
+          "nota": null,
+          "ejercicios": [
+            { "orden": 1, "nombre": "Sentadilla normal en multipower",        "reps": "10-10-12-15",      "descanso": "1 min", "obs": null },
+            { "orden": 2, "nombre": "Sentadilla sumo profunda en TRX",        "reps": "10-10-10-10",      "descanso": "1 min", "obs": null },
+            { "orden": 3, "nombre": "Swing con kettlebell",                   "reps": "10-10-10-10",      "descanso": "1 min", "obs": "Va combinado con la sentadilla sumo de abajo" },
+            { "orden": 4, "nombre": "Sentadilla sumo con kettlebell",         "reps": "10-10-10-10",      "descanso": "1 min", "obs": null },
+            { "orden": 5, "nombre": "Plancha abdominal sobre banco plano",    "reps": "30 seg x 3",       "descanso": "1 min", "obs": null },
+            { "orden": 6, "nombre": "Pase de pie sobre pesa en el suelo",     "reps": "10-10-10 c/pierna","descanso": "1 min", "obs": "Sentada, poner una pesa en vertical e intentar pasar el pie por encima de ella de un lado al otro sin tocar el suelo" }
+          ]
+        },
+        {
+          "dia": 2,
+          "label": "Espalda · Bíceps",
+          "sub": "6 ejercicios",
+          "calentamiento": "Elíptica 10 min",
+          "nota": null,
+          "ejercicios": [
+            { "orden": 1, "nombre": "Remos en TRX",                              "reps": "10-10-12-15", "descanso": "1 min", "obs": "Remo normal, remo alto y remo inverso" },
+            { "orden": 2, "nombre": "Remo con cuerdas en polea",                 "reps": "10-12-12-15", "descanso": "1 min", "obs": null },
+            { "orden": 3, "nombre": "Remo con mancuerna apoyada en banco",       "reps": "10-10-10",    "descanso": "1 min", "obs": null },
+            { "orden": 4, "nombre": "Curl de bíceps con mancuerna",              "reps": "10-10-10",    "descanso": "1 min", "obs": null },
+            { "orden": 5, "nombre": "Martillo de bíceps con mancuerna",          "reps": "10-10-10",    "descanso": "1 min", "obs": "Combinar con el ejercicio de abajo en polea" },
+            { "orden": 6, "nombre": "Curl de bíceps con barra recta en polea baja", "reps": "10-10-10", "descanso": "1 min", "obs": null }
+          ]
+        },
+        {
+          "dia": 3,
+          "label": "Pecho · Hombros · Tríceps",
+          "sub": "6 ejercicios",
+          "calentamiento": "Elíptica 10 min",
+          "nota": null,
+          "ejercicios": [
+            { "orden": 1, "nombre": "Press pectoral en multipower",               "reps": "10-10-12-15", "descanso": "1 min", "obs": null },
+            { "orden": 2, "nombre": "Press pectoral inclinado en multipower",     "reps": "10-12-12-15", "descanso": "1 min", "obs": null },
+            { "orden": 3, "nombre": "Press de hombro en multipower",              "reps": "10-10-10",    "descanso": "1 min", "obs": null },
+            { "orden": 4, "nombre": "Elevación lateral con mancuernas",          "reps": "10-10-10",    "descanso": "1 min", "obs": "Cuando estén arriba, juntar los brazos al medio, volver a abrir y bajar" },
+            { "orden": 5, "nombre": "Press francés tumbada en banco con barra W", "reps": "10-12-15",    "descanso": "1 min", "obs": null },
+            { "orden": 6, "nombre": "Extensión de tríceps apoyada en banco",     "reps": "10-10-10",    "descanso": "1 min", "obs": null }
+          ]
+        },
+        {
+          "dia": 4,
+          "label": "Full body · Circuito",
+          "sub": "6 ejercicios",
+          "calentamiento": "Elíptica 10 min",
+          "nota": "3 rondas + cinta",
+          "ejercicios": [
+            { "orden": 1, "nombre": "Flexiones sobre step (rodillas si necesario)",                    "reps": "10-12-15",   "descanso": "1 min", "obs": "Al finalizar cada ronda, 3 min de cinta con inclinación" },
+            { "orden": 2, "nombre": "Subir y bajar de lado al step",                                   "reps": "10-10-10",   "descanso": "1 min", "obs": null },
+            { "orden": 3, "nombre": "Zancadas con TRX",                                                "reps": "10-10-10",   "descanso": "1 min", "obs": null },
+            { "orden": 4, "nombre": "Skierg de tríceps",                                               "reps": "15-15-15",   "descanso": "1 min", "obs": null },
+            { "orden": 5, "nombre": "Sentadilla sumo con mancuernas + martillo de bíceps al subir",   "reps": "10-12-15",   "descanso": "1 min", "obs": null },
+            { "orden": 6, "nombre": "Press francés en TRX",                                            "reps": "30\"-45\"-45\"", "descanso": "1 min", "obs": null }
+          ]
+        }
+      ]
+    },
+    {
+      "id": 1,
+      "nombre": "Febrero 2026",
+      "orden": 3,
+      "circuitos": [
+        {
+          "dia": 1,
+          "label": "Pierna · Cuádriceps",
+          "sub": "6 ejercicios",
+          "calentamiento": "Elíptica 5 min + 15 min al finalizar",
+          "nota": null,
+          "ejercicios": [
+            { "orden": 1, "nombre": "Sentadilla en TRX normal + profunda",                "reps": "10-10-10 de cada tipo", "descanso": "1 min", "obs": "20 sentadillas por serie, 10 de cada tipo. Las normales y las profundas muy despacio" },
+            { "orden": 2, "nombre": "Sentadilla normal en multipower",                    "reps": "10-10-10-10",           "descanso": "1 min", "obs": "Prioriza la amplitud de movimiento por delante del peso" },
+            { "orden": 3, "nombre": "Tijeras en multipower",                              "reps": "10-10-10-8",            "descanso": "1 min", "obs": "Sin peso, es difícil" },
+            { "orden": 4, "nombre": "Extensión de cuádriceps en máquina",                "reps": "10-10-10-10",           "descanso": "1 min", "obs": null },
+            { "orden": 5, "nombre": "Prensa de cuádriceps en posición de sentadilla sumo","reps": "10-10-10",             "descanso": "1 min", "obs": null },
+            { "orden": 6, "nombre": "Swing de kettlebell",                                "reps": "10-10-10",              "descanso": "1 min", "obs": "Poco peso pero apretando bien el glúteo en la posición más alta" }
+          ]
+        },
+        {
+          "dia": 2,
+          "label": "Pecho · Hombros",
+          "sub": "6 ejercicios",
+          "calentamiento": "Máquina de remo · 1000 m",
+          "nota": null,
+          "ejercicios": [
+            { "orden": 1, "nombre": "Press de pectoral en máquina",                       "reps": "10-12-12-12", "descanso": "1 min", "obs": null },
+            { "orden": 2, "nombre": "Press inclinado con mancuernas en banco",            "reps": "10-10-10",    "descanso": "1 min", "obs": null },
+            { "orden": 3, "nombre": "Flexiones normales en banco",                        "reps": "10-12-12",    "descanso": "1 min", "obs": null },
+            { "orden": 4, "nombre": "Elevación lateral a una mano en polea",             "reps": "10-10-10-10", "descanso": "1 min", "obs": null },
+            { "orden": 5, "nombre": "Elevación frontal con ambas manos en polea",        "reps": "10-10-10",    "descanso": "1 min", "obs": null },
+            { "orden": 6, "nombre": "Elevaciones frontales con disco + giros",           "reps": "10-10-10",    "descanso": "1 min", "obs": "En el momento más alto, pequeños giros a cada lado, vuelta al centro y bajas" }
+          ]
+        },
+        {
+          "dia": 3,
+          "label": "Espalda · Tríceps",
+          "sub": "6 ejercicios",
+          "calentamiento": "Elíptica 10 min",
+          "nota": null,
+          "ejercicios": [
+            { "orden": 1, "nombre": "Jalón al pecho",                                          "reps": "10-10-12-15", "descanso": "1 min", "obs": null },
+            { "orden": 2, "nombre": "Remo en polea alta (agarre cerrado)",                    "reps": "10-12-12-15", "descanso": "1 min", "obs": null },
+            { "orden": 3, "nombre": "Remo en máquina",                                        "reps": "10-10-10",    "descanso": "1 min", "obs": null },
+            { "orden": 4, "nombre": "Remo a una mano con mancuerna",                         "reps": "10-10-10",    "descanso": "1 min", "obs": "Parada larga entre repetición" },
+            { "orden": 5, "nombre": "Extensión de tríceps en polea con agarre V",            "reps": "10-12-15",    "descanso": "1 min", "obs": null },
+            { "orden": 6, "nombre": "Extensión de tríceps en polea a una mano (cuerda)",     "reps": "10-10-10",    "descanso": "1 min", "obs": null }
+          ]
+        },
+        {
+          "dia": 4,
+          "label": "Full body · Circuito",
+          "sub": "6 ejercicios",
+          "calentamiento": "Elíptica 10 min",
+          "nota": null,
+          "ejercicios": [
+            { "orden": 1, "nombre": "Sentadilla con kettlebell",                              "reps": "10-12-12-15",    "descanso": "1 min", "obs": "Entre ejercicio realizar 200 m de remo" },
+            { "orden": 2, "nombre": "Thrusters con mancuernas",                              "reps": "10-10-10-10",    "descanso": "1 min", "obs": null },
+            { "orden": 3, "nombre": "Curl de bíceps con mancuernas",                        "reps": "10-10-10",       "descanso": "1 min", "obs": null },
+            { "orden": 4, "nombre": "Martillo de bíceps con mancuerna",                     "reps": "15-15-15",       "descanso": "1 min", "obs": null },
+            { "orden": 5, "nombre": "Sentadillas en polea baja (agarre de remo)",           "reps": "10-12-12-15",    "descanso": "1 min", "obs": null },
+            { "orden": 6, "nombre": "Sentadilla isométrica en pared a 90°",                 "reps": "30\"-45\"-45\"", "descanso": "1 min", "obs": null }
           ]
         }
       ]
