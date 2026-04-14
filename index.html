@@ -33,25 +33,21 @@
   }
 
   .gcal-btn {
-    display: block;
-    width: calc(100% - 24px);
-    margin: 12px;
-    padding: 11px 16px;
-    background: var(--accent);
-    color: #fff;
-    border: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 36px;
+    height: 36px;
     border-radius: 10px;
-    font-family: 'DM Sans', sans-serif;
-    font-size: 13px;
-    font-weight: 500;
-    cursor: pointer;
-    text-align: center;
+    background: var(--accent-light);
+    font-size: 18px;
     text-decoration: none;
-    transition: opacity 0.2s;
+    flex-shrink: 0;
+    transition: background 0.2s;
   }
 
   @media (hover: hover) and (pointer: fine) {
-    .gcal-btn:hover { opacity: 0.85; }
+    .gcal-btn:hover { background: #d0e4db; }
   }
 
   .month-nav {
@@ -417,6 +413,7 @@
               <h3>${c.label}</h3>
               <p>${c.sub || ''}</p>
             </div>
+            <a class="gcal-btn" href="${gcalUrl}" target="_blank" rel="noopener" onclick="event.stopPropagation()" aria-label="Añadir al calendario">📅</a>
             <span class="chevron-icon">▼</span>
           </div>
           <div class="circuit-body">
@@ -442,7 +439,6 @@
                 </tr>`).join('')}
               </tbody>
             </table>
-            <a class="gcal-btn" href="${gcalUrl}" target="_blank" rel="noopener">✓ Hecho hoy — añadir al calendario</a>
           </div>
         </div>`;
       });
