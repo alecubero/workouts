@@ -285,6 +285,50 @@
     color: #c0392b;
     font-size: 14px;
   }
+
+  /* Floating timer */
+  .timer-fab {
+    position: fixed;
+    bottom: 24px;
+    right: 20px;
+    width: 72px;
+    height: 72px;
+    border-radius: 50%;
+    background: var(--accent);
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 4px 16px rgba(0,0,0,0.18);
+    -webkit-tap-highlight-color: transparent;
+    user-select: none;
+    transition: background 0.2s;
+    z-index: 100;
+  }
+
+  .timer-fab.running { background: #1a2e26; }
+  .timer-fab.done    { background: #b85c38; }
+
+  .timer-fab .timer-time {
+    font-family: 'DM Serif Display', serif;
+    font-size: 20px;
+    line-height: 1;
+  }
+
+  .timer-fab .timer-label {
+    font-size: 9px;
+    font-weight: 500;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    opacity: 0.75;
+    margin-top: 2px;
+  }
+
+  /* Extra bottom padding so last card isn't hidden behind the FAB */
+  #mainContent { padding-bottom: 100px; }
 </style>
 </head>
 <body>
@@ -294,6 +338,11 @@
 </nav>
 
 <main id="mainContent"></main>
+
+<button class="timer-fab" id="timerFab" aria-label="Cronómetro de descanso">
+  <span class="timer-time" id="timerDisplay">1:00</span>
+  <span class="timer-label" id="timerLabel">descanso</span>
+</button>
 
 <script>
   const dotColors = ['d1', 'd2', 'd3', 'd4'];
@@ -419,6 +468,77 @@
   };
 
   loadData();
+
+  // --- Countdown timer ---
+  const DURATION = 60;
+  let remaining  = DURATION;
+  let intervalId = null;
+
+  const fab     = document.getElementById('timerFab');
+  const display = document.getElementById('timerDisplay');
+  const label   = document.getElementById('timerLabel');
+
+  function fmt(s) {
+    return `${Math.floor(s / 60)}:${String(s % 60).padStart(2, '0')}`;
+  }
+
+  function beep() {
+    try {
+      const ctx  = new (window.AudioContext || window.webkitAudioContext)();
+      const osc  = ctx.createOscillator();
+      const gain = ctx.createGain();
+      osc.connect(gain);
+      gain.connect(ctx.destination);
+      osc.frequency.value = 880;
+      gain.gain.setValueAtTime(0.4, ctx.currentTime);
+      gain.gain.exponentialRampToValueAtTime(0.001, ctx.currentTime + 0.6);
+      osc.start(ctx.currentTime);
+      osc.stop(ctx.currentTime + 0.6);
+    } catch (_) {}
+  }
+
+  function stopTimer() {
+    clearInterval(intervalId);
+    intervalId = null;
+  }
+
+  function resetTimer() {
+    stopTimer();
+    remaining = DURATION;
+    display.textContent = fmt(remaining);
+    label.textContent   = 'descanso';
+    fab.classList.remove('running', 'done');
+  }
+
+  fab.addEventListener('click', () => {
+    if (intervalId) {
+      // Running → reset
+      resetTimer();
+      return;
+    }
+    if (remaining === 0) {
+      // Done → reset and start
+      resetTimer();
+    }
+    // Start
+    fab.classList.add('running');
+    fab.classList.remove('done');
+    label.textContent = 'toca para reiniciar';
+    if (navigator.vibrate) navigator.vibrate(40);
+
+    intervalId = setInterval(() => {
+      remaining--;
+      display.textContent = fmt(remaining);
+      if (remaining === 0) {
+        stopTimer();
+        fab.classList.remove('running');
+        fab.classList.add('done');
+        label.textContent = '¡listo!';
+        beep();
+        if (navigator.vibrate) navigator.vibrate([200, 100, 200]);
+      }
+    }, 1000);
+  });
 </script>
 
 </body>
