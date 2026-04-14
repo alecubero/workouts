@@ -353,16 +353,10 @@
     const next  = new Date(now); next.setDate(now.getDate() + 1);
     const ymd1  = next.toISOString().slice(0, 10).replace(/-/g, '');
 
-    const title   = `Entrenamiento: ${circuito.label}`;
-    const details = circuito.ejercicios
-      .map(e => `• ${e.nombre} (${e.reps})${e.obs ? ' — ' + e.obs : ''}`)
-      .join('\n');
-
     const params = new URLSearchParams({
-      action:  'TEMPLATE',
-      text:    title,
-      dates:   `${ymd}/${ymd1}`,
-      details: details,
+      action: 'TEMPLATE',
+      text:   `🏋️‍♀️ Circuito ${circuito.dia}`,
+      dates:  `${ymd}/${ymd1}`,
     });
     return `https://calendar.google.com/calendar/render?${params.toString()}`;
   }
