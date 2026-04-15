@@ -64,6 +64,23 @@
             { "orden": 5, "nombre": "Zancada con press de hombro a una mano",          "reps": "10-10-10", "descanso": "1 min", "obs": null },
             { "orden": 6, "nombre": "Plancha",                                          "reps": "40 seg",   "descanso": "1 min", "obs": null }
           ]
+        },
+        {
+          "dia": 5,
+          "label": "Movilidad · Cadera · Fitball",
+          "sub": "8 ejercicios",
+          "calentamiento": "Sin calentamiento",
+          "nota": null,
+          "ejercicios": [
+            { "orden": 1, "nombre": "Rotación interna de cadera en bisagra",   "reps": "6-8 por lado", "descanso": "30-45s", "obs": "Movimiento lento, pelvis estable, no forzar rango" },
+            { "orden": 2, "nombre": "Marcha con rotación interna de cadera",    "reps": "6-8 por lado", "descanso": "30-45s", "obs": "Controlar equilibrio, subir rodilla sin colapsar pelvis" },
+            { "orden": 3, "nombre": "Balanceo pélvico en fitball",              "reps": "1-2 min",      "descanso": "-",      "obs": "Movimiento suave, acompaña con respiración" },
+            { "orden": 4, "nombre": "Círculos de cadera en fitball",            "reps": "1 min por lado","descanso": "-",     "obs": "Círculos amplios y fluidos, sin rigidez" },
+            { "orden": 5, "nombre": "Ochos en fitball",                         "reps": "1-2 min",      "descanso": "-",      "obs": "Movimiento continuo, sin rebotes" },
+            { "orden": 6, "nombre": "Rebotes suaves en fitball",                "reps": "1 min",        "descanso": "-",      "obs": "Muy suaves, más para soltar que para activar" },
+            { "orden": 7, "nombre": "Inclinación lateral en fitball",           "reps": "8-10 por lado","descanso": "30s",    "obs": "Mantener control, no colapsar el tronco" },
+            { "orden": 8, "nombre": "Apoyo hacia delante en fitball",           "reps": "1-2 min",      "descanso": "-",      "obs": "Respiración profunda, dejar peso caer (muy relajante)" }
+          ]
         }
       ]
     },
