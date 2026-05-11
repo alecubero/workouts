@@ -64,6 +64,22 @@
             { "orden": 5, "nombre": "Patada de glúteo en máquina",                                                   "reps": "10-10-10",       "descanso": "1 min", "obs": null },
             { "orden": 6, "nombre": "Aperturas laterales de pie apoyada en la pared con goma en los tobillos",      "reps": "10-10-10 + 20 seg","descanso": "1 min", "obs": "En la última repetición, quedarse en el máximo punto de apertura" }
           ]
+        },
+        {
+          "dia": 5,
+          "label": "Extra · Full Body en casa",
+          "sub": "7 ejercicios · 3 rondas",
+          "calentamiento": "Movilidad articular 10 min",
+          "nota": "3 rondas",
+          "ejercicios": [
+            { "orden": 1, "nombre": "Sentadilla con kettlebell",             "reps": "12-12-12",        "descanso": "1 min", "obs": null },
+            { "orden": 2, "nombre": "Remo en TRX",                           "reps": "12-12-12",        "descanso": "1 min", "obs": null },
+            { "orden": 3, "nombre": "Press de pecho con mancuernas en suelo","reps": "10-10-10",        "descanso": "1 min", "obs": null },
+            { "orden": 4, "nombre": "Sentadilla búlgara con TRX",            "reps": "10-10-10 c/pierna","descanso": "1 min", "obs": "Pie trasero apoyado en el TRX, más demandante que la zancada clásica" },
+            { "orden": 5, "nombre": "Press de hombro con mancuernas",        "reps": "10-10-10",        "descanso": "1 min", "obs": null },
+            { "orden": 6, "nombre": "Swing con kettlebell",                  "reps": "15-15-15",        "descanso": "1 min", "obs": null },
+            { "orden": 7, "nombre": "Plancha",                               "reps": "40\"-45\"-45\"",  "descanso": "1 min", "obs": null }
+          ]
         }
       ]
     },
