@@ -1,6 +1,73 @@
 {
   "meses": [
     {
+      "id": 4,
+      "nombre": "Mayo 2026",
+      "orden": 0,
+      "circuitos": [
+        {
+          "dia": 1,
+          "label": "Espalda · Jalón y Remo",
+          "sub": "6 ejercicios",
+          "calentamiento": "Elíptica 10 min",
+          "nota": null,
+          "ejercicios": [
+            { "orden": 1, "nombre": "Jalón en máquina Technogym unilateral",              "reps": "10-8-8-6",              "descanso": "1 min",   "obs": null },
+            { "orden": 2, "nombre": "Remo con agarre cerrado en polea alta",              "reps": "10-10-10",              "descanso": "1 min",   "obs": null },
+            { "orden": 3, "nombre": "Jalón agarre contrario sin reclinarse en polea alta","reps": "10-10-10",              "descanso": "1 min",   "obs": null },
+            { "orden": 4, "nombre": "Remo unilateral en polea sentado",                   "reps": "10-10-10 + 5 a una mano","descanso": "1 min",  "obs": "10 repeticiones normales con ambos brazos y después 5 reps con un brazo estirado sosteniendo la tensión mientras el otro realiza el movimiento" },
+            { "orden": 5, "nombre": "Cuerdas al mentón",                                  "reps": "15-15-15",              "descanso": "1 min",   "obs": null },
+            { "orden": 6, "nombre": "Martillo de bíceps con cuerdas en polea baja",      "reps": "10-10-10",              "descanso": "1,5 min", "obs": null }
+          ]
+        },
+        {
+          "dia": 2,
+          "label": "Pierna · Cuádriceps",
+          "sub": "6 ejercicios",
+          "calentamiento": "Elíptica 10 min",
+          "nota": null,
+          "ejercicios": [
+            { "orden": 1, "nombre": "Sentadilla en multipower",                                    "reps": "10-10-8-8", "descanso": "1 min", "obs": "Mucho peso" },
+            { "orden": 2, "nombre": "Zancadas en TRX",                                             "reps": "10-10-10",  "descanso": "1 min", "obs": "5 kg por lado" },
+            { "orden": 3, "nombre": "Sentadilla apoyada en la pared con ligera rotación",          "reps": "10-10-10",  "descanso": "1 min", "obs": "En posición de sentadilla apoyada en la pared, hacer una elevación frontal con disco de 2,5 kg moviéndolo de lado a lado sin perder altura" },
+            { "orden": 4, "nombre": "Extensión de cuádriceps en máquina",                         "reps": "10-10-8",   "descanso": "1 min", "obs": null },
+            { "orden": 5, "nombre": "Contractora de femoral de pie a una pierna",                 "reps": "10-10-10",  "descanso": "1 min", "obs": null },
+            { "orden": 6, "nombre": "Empuje de gemelos con step",                                  "reps": "15-15-15",  "descanso": "1 min", "obs": null }
+          ]
+        },
+        {
+          "dia": 3,
+          "label": "Pecho · Hombros",
+          "sub": "6 ejercicios",
+          "calentamiento": "Elíptica 10 min",
+          "nota": null,
+          "ejercicios": [
+            { "orden": 1, "nombre": "Press de pecho en multipower",          "reps": "10-10-10-8",     "descanso": "1 min",   "obs": "Muy pesadas" },
+            { "orden": 2, "nombre": "Aperturas de pectoral en máquina",      "reps": "10-10-10",       "descanso": "1 min",   "obs": "Muy despacio con poco peso" },
+            { "orden": 3, "nombre": "Empuje de pecho en máquina",            "reps": "10-10-12",       "descanso": "1 min",   "obs": "Poco peso y movimiento muy lento" },
+            { "orden": 4, "nombre": "Press de hombro con mancuernas",        "reps": "10-10-10-10",    "descanso": "1 min",   "obs": "Muy pesadas" },
+            { "orden": 5, "nombre": "Press de hombro en multipower de pie",  "reps": "10-10-10",       "descanso": "1 min",   "obs": "Peso normal con mucho control, sobre todo la bajada. Prohibido flexionar rodillas para ayudar la subida" },
+            { "orden": 6, "nombre": "Flexiones al fallo en paralelas",       "reps": "3 series al fallo","descanso": "1,5 min","obs": null }
+          ]
+        },
+        {
+          "dia": 4,
+          "label": "Pierna · Glúteo",
+          "sub": "6 ejercicios",
+          "calentamiento": "Elíptica 10 min",
+          "nota": null,
+          "ejercicios": [
+            { "orden": 1, "nombre": "Sentadilla con una mancuerna pesada",                                           "reps": "10-10-8-8",      "descanso": "1 min", "obs": null },
+            { "orden": 2, "nombre": "Sentadilla sumo con mancuerna",                                                 "reps": "10-10-10",       "descanso": "1 min", "obs": null },
+            { "orden": 3, "nombre": "Máquina de abducción",                                                          "reps": "10-12-15",       "descanso": "1 min", "obs": null },
+            { "orden": 4, "nombre": "Máquina de adducción",                                                          "reps": "10-12-15",       "descanso": "1 min", "obs": null },
+            { "orden": 5, "nombre": "Patada de glúteo en máquina",                                                   "reps": "10-10-10",       "descanso": "1 min", "obs": null },
+            { "orden": 6, "nombre": "Aperturas laterales de pie apoyada en la pared con goma en los tobillos",      "reps": "10-10-10 + 20 seg","descanso": "1 min", "obs": "En la última repetición, quedarse en el máximo punto de apertura" }
+          ]
+        }
+      ]
+    },
+    {
       "id": 3,
       "nombre": "Abril 2026",
       "orden": 1,
